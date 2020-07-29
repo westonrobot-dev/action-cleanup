@@ -1,10 +1,8 @@
-# see package.yml for usage 
-name: 'Clean Workspace'
+name: 'Cleanup Workspace'
 description: 'Deletes all files in the work directory.'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://rtcamp/action-cleanup:v1.0.0'
 branding:
   icon: delete
   color: red
-  
