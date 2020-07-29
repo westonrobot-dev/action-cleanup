@@ -10,12 +10,13 @@ It seems the checkout action is run as the host user, but files created by other
 actions is run by root.  The subsequent checkout is unable to remove the files
 created from the previous run.  Action Runners does not automatically clean up.
 
-
+This action can also be used in the end of workflow to clear all files 
+and free up diskspace in self-hosted runner.
 
 ## Usage
 
 ```
-name: Build with Clean
+name: Build with Cleanup
 
 on:
   push:
@@ -25,7 +26,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - uses: AutoModality/action-clean@v1
+      - uses: rtCamp/action-cleanup@master
       - uses: actions/checkout@v2
       - run: echo Hello World
 ```
