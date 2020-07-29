@@ -1,4 +1,4 @@
-# Clean Github Action
+# Cleanup Workspace - Github Action
 
 Simply removes all files from the root directory. 
 
@@ -15,7 +15,7 @@ and free up diskspace in self-hosted runner.
 
 ## Usage
 
-```
+```yml
 name: Build with Cleanup
 
 on:
