@@ -11,6 +11,7 @@ rm -rf *
 # Cleanup home directory
 echo "Cleaning up home directory."
 echo $HOME
+pwd
 [[ -d "$HOME" ]] && cd "$HOME" && rm -rf *
 
 # Cleanup event json
