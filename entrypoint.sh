@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e # fail on error
+set -ex # fail on error
 
 # include hidden files 
 # https://askubuntu.com/questions/740805/how-can-i-remove-all-files-from-current-directory-using-terminal
@@ -10,6 +10,7 @@ rm -rf *
 
 # Cleanup home directory
 echo "Cleaning up home directory."
+echo $HOME
 [[ -d "$HOME" ]] && cd "$HOME" && rm -rf *
 
 # Cleanup event json
